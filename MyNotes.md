@@ -18,3 +18,6 @@
 * Want to rename calculateGalacticAge()
      * it's a setter so name setGalacticAge()
      * will change after done with functionality
+
+* keep date
+     + maybe add birthday things
