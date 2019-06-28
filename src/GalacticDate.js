@@ -47,19 +47,19 @@ export class GalacticDate extends Date {
     const JupiterMax = 1043.68;
     if(this.planet == "Mercury"){
       this.planetAge = this.getMercuryAge();
-      this.remainPlanetYears = this.planetAge - MercuryMax;
+      this.remainPlanetYears = Math.ceil(MercuryMax - this.planetAge);
       return;
     }else if(this.planet == "Venus"){
       this.planetAge = this.getVenusAge();
-      this.remainPlanetYears = this.planetAge - VenusMax;
+      this.remainPlanetYears = Math.ceil( VenusMax - this.planetAge);
       return;
     }else if(this.planet == "Mars"){
        this.planetAge = this.getMarsAge();
-       this.remainPlanetYears = this.planetAge - MarsMax;
+       this.remainPlanetYears = Math.ceil( MarsMax - this.planetAge);
       return;
     }else if(this.planet == "Jupiter"){
       this.planetAge = this.getJupiterAge();
-      this.remainPlanetYears = this.planetAge - JupiterMax;
+      this.remainPlanetYears = Math.ceil( JupiterMax - this.planetAge);
       return;
     }else{
       return;
