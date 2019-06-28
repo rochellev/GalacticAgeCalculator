@@ -36,7 +36,7 @@ export class GalacticDate extends Date {
   }
 
   calculateGalacticAge(){
-    
+    debugger;
     if(this.planet == "Mercury"){
       return this.getMercuryAge();
     }else if(this.planet == "Venus"){
