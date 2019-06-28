@@ -1,10 +1,11 @@
 export class GalacticDate extends Date {
-  constructor(year, month, day, age) {
+  constructor(year, month, day, age, planet) {
     super();
     this.setFullYear(year);
     this.setMonth(month);
     this.setDate(day);
     this.age = age;
+    this.planet = planet;
   }
 
   getWeekday() {
@@ -32,6 +33,22 @@ export class GalacticDate extends Date {
   // Returns their age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
   getJupiterAge() {
     return this.age * 11.86;
+  }
+
+  calculateGalacticAge(){
+    
+    if(this.planet == "Mercury"){
+      return this.getMercuryAge();
+    }else if(this.planet == "Venus"){
+      return this.getVenusAge();
+    }else if(this.planet == "Mars"){
+      return this.getMarsAge();
+    }else if(this.planet == "Jupiter"){
+      return this.getJupiterAge();
+    }else{
+      return false;
+    }
+
   }
 
 }
