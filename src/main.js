@@ -10,8 +10,11 @@ $(document).ready(function() {
     let monthInput = parseInt($('#month').val());
     let dayInput = parseInt($('#day').val());
     let yearInput = parseInt($('#year').val());
-    let dateInput = new GalacticDate(yearInput, monthInput, dayInput);
+    let ageInput = parseInt($('#yage').val());
+    let planetInput = $('#planet').val();
+    let dateInput = new GalacticDate(yearInput, monthInput, dayInput, ageInput, planetInput);
 
+    //let planets = ["Mercury", "Venus", "Mars", "Jupiter"];
 
     $("#solution").append("<li> The date " + (monthInput+1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! </li>");
 
