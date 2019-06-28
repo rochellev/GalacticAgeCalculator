@@ -11,7 +11,6 @@
 $ git clone https://github.com/rochellev/GalacticAgeCalculator.git
 $ cd GalacticAgeCalculator
 $ npm install
-$ npm run start
 ```
 
 ## Specs
@@ -32,3 +31,4 @@ $ npm run start
 * Webpack
 * Jasmine
 * Karma
+* NodeJS
