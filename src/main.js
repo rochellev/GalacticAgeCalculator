@@ -16,9 +16,5 @@ $(document).ready(function() {
     $("#solution").append("<li> The date " + (monthInput+1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! </li>");
 
 
-
-    // output.forEach(function(element) {
-    //   $('#solution').append("<li>" + element + "</li>");
-    // });
   });
 });
