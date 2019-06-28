@@ -14,3 +14,7 @@
     + Maybe i go back and make a more complex formula but for now i will use a constant 
 
 * styling not a priority but i did want some basic UI
+
+* Want to rename calculateGalacticAge()
+     * it's a setter so name setGalacticAge()
+     * will change after done with functionality
