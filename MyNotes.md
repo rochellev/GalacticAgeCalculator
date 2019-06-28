@@ -3,13 +3,14 @@
 ## This documents my thoughts and plans for the Galactic Age Calculator 
 
 ---
+* got started from cloning working project from my repo, npm install then npm run start
+* but i had a problem :(
+* took a long time setting up. I got fixated on npm run start not working
+     + it builds but gives error of build scrit not found
+     + decided best to forget this issue for now, needed to move on!
 
-## Set up
-1. do webpack -- see the weekend hwk for reference
-2. jasmine and karma
 
+* I will use life expectancy of 88 years. 
+    + Maybe i go back and make a more complex formula but for now i will use a constant 
 
-* I will use life expectancy for men 77 , women is 79 Earth Years
-
-* used ping pong and weekday to help set up
-* for some reason npm run start not working  and i spend way too much time trying to fix that
+* styling not a priority but i did want some basic UI
