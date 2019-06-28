@@ -49,8 +49,4 @@ describe('GalacticDate', function () {
     it('should test whether years left for jupiter returns correct number', function () {
         expect(jupiter.remainPlanetYears).toEqual(748);
     });
-
-
-
-
 });

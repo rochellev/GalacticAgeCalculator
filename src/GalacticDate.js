@@ -40,6 +40,7 @@ export class GalacticDate extends Date {
     return this.age * 11.86;
   }
 
+  //  a setter, but named before realized that
   calculateGalacticAge(){
     const  MercuryMax = 21.12;
     const VenusMax = 54.56;
@@ -66,6 +67,8 @@ export class GalacticDate extends Date {
     }
 
   }
+
+
 
   
 

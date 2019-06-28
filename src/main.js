@@ -20,7 +20,13 @@ $(document).ready(function () {
     $("#solution").append("<li> The date " + (monthInput + 1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! Your age on Earth is " + ageInput + " , and your age on " + planetInput + " is " + dateInput.planetAge + "</li>");
 
     $("#lifespan").click(function(){
-      $("#yearsLeft").append("<div> Your remaining age on " + planetInput + " is " + dateInput.remainPlanetYears + "</div>");
+      if(dateInput.remainPlanetYears > 0){
+        $("#yearsLeft").html("<div> You have " + dateInput.remainPlanetYears + " years left on " + planetInput + "</div>");
+      }else{
+        $("#yearsLeft").html("<div> You have lived an extra " + Math.abs(dateInput.remainPlanetYears) + " years on " + planetInput + ". Congrats!</div>");
+      }
+
+     
       
 
     });
