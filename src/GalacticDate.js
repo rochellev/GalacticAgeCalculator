@@ -1,11 +1,16 @@
 export class GalacticDate extends Date {
+  
   constructor(year, month, day, age, planet) {
     super();
+    // const EarthMax = 88;
+   
     this.setFullYear(year);
     this.setMonth(month);
     this.setDate(day);
     this.age = age;
     this.planet = planet;
+    this.planetAge = 0;
+    this.remainPlanetYears = 0;
   }
 
   getWeekday() {
@@ -36,20 +41,33 @@ export class GalacticDate extends Date {
   }
 
   calculateGalacticAge(){
-    debugger;
+    const  MercuryMax = 21.12;
+    const VenusMax = 54.56;
+    const MarsMax = 165.44;
+    const JupiterMax = 1043.68;
     if(this.planet == "Mercury"){
-      return this.getMercuryAge();
+      this.planetAge = this.getMercuryAge();
+      this.remainPlanetYears = this.planetAge - MercuryMax;
+      return;
     }else if(this.planet == "Venus"){
-      return this.getVenusAge();
+      this.planetAge = this.getVenusAge();
+      this.remainPlanetYears = this.planetAge - VenusMax;
+      return;
     }else if(this.planet == "Mars"){
-      return this.getMarsAge();
+       this.planetAge = this.getMarsAge();
+       this.remainPlanetYears = this.planetAge - MarsMax;
+      return;
     }else if(this.planet == "Jupiter"){
-      return this.getJupiterAge();
+      this.planetAge = this.getJupiterAge();
+      this.remainPlanetYears = this.planetAge - JupiterMax;
+      return;
     }else{
-      return false;
+      return;
     }
 
   }
+
+  
 
 }
 

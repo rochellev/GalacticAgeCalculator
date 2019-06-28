@@ -13,10 +13,17 @@ $(document).ready(function () {
     let ageInput = parseInt($('#age').val());
     let planetInput = $('#planet').val();
     let dateInput = new GalacticDate(yearInput, monthInput, dayInput, ageInput, planetInput);
+    dateInput.calculateGalacticAge();
 
     //let planets = ["Mercury", "Venus", "Mars", "Jupiter"];
 
-    $("#solution").append("<li> The date " + (monthInput + 1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! Your age on Earth is " + ageInput + " , and your age on " + planetInput + " is " + dateInput.calculateGalacticAge() + "</li>");
+    $("#solution").append("<li> The date " + (monthInput + 1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! Your age on Earth is " + ageInput + " , and your age on " + planetInput + " is " + dateInput.planetAge + "</li>");
+
+    $("#lifespan").click(function(){
+      $("#yearsLeft").append("<div> Your remaining age on " + planetInput + " is " + dateInput.remainPlanetYears + "</div>");
+      
+
+    });
 
 
   });

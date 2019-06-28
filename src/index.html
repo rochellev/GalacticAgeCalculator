@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Galactic Age Caclculator</title>
-  </head>
-  <body>
-    <form id="date-form">
-      <label for="month">Select a Month:</label>
-      <select class="form-control" id="month">
-        <option value="0">January</option>
-        <option value="1">February</option>
-        <option value="2">March</option>
-        <option value="3">April</option>
-        <option value="4">May</option>
-        <option value="5">June</option>
-        <option value="6">July</option>
-        <option value="7">August</option>
-        <option value="8">September</option>
-        <option value="9">October</option>
-        <option value="10">November</option>
-        <option value="10">December</option>
-      </select>
-      <label for="day">Enter a Day:</label>
-      <input id="day" type="number">
-      <label for="year">Enter a Year:</label>
-      <input id="year" type="number">
-      <label for="age">Enter your Earth Age:</label>
-      <input id="age" type="number">
 
-      <label for="planet">Select a Planet:</label>
-      <select class="form-control" id="planet">
-        <option value="Mercury">Mercury</option>
-        <option value="Venus">Venus</option>
-        <option value="Mars">Mars</option>
-        <option value="Jupiter">Jupiter</option>
-      </select>
-      
+<head>
+  <title>Galactic Age Caclculator</title>
+</head>
 
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
-  </body>
+<body>
+  <form id="date-form">
+    <label for="month">Select a Month:</label>
+    <select class="form-control" id="month">
+      <option value="0">January</option>
+      <option value="1">February</option>
+      <option value="2">March</option>
+      <option value="3">April</option>
+      <option value="4">May</option>
+      <option value="5">June</option>
+      <option value="6">July</option>
+      <option value="7">August</option>
+      <option value="8">September</option>
+      <option value="9">October</option>
+      <option value="10">November</option>
+      <option value="10">December</option>
+    </select>
+    <label for="day">Enter a Day:</label>
+    <input id="day" type="number">
+    <label for="year">Enter a Year:</label>
+    <input id="year" type="number">
+    <label for="age">Enter your Earth Age:</label>
+    <input id="age" type="number">
+    <label for="planet">Select a Planet:</label>
+    <select class="form-control" id="planet">
+      <option value="Mercury">Mercury</option>
+      <option value="Venus">Venus</option>
+      <option value="Mars">Mars</option>
+      <option value="Jupiter">Jupiter</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="outputArea">
+      <button id="lifespan" type="button">Show Remaining Years</button>
+      <div id="yearsLeft"></div>
+      <ul id="solution"></ul>
+  </div>
+  
+</body>
+
 </html>
