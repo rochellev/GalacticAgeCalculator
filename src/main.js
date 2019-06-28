@@ -1,15 +1,24 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { pingPong } from './ping-pong';
+import './styles.css';
+import { GalacticDate } from './GalacticDate';
 
 $(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+  $('#date-form').submit(function(event) {
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    let monthInput = parseInt($('#month').val());
+    let dayInput = parseInt($('#day').val());
+    let yearInput = parseInt($('#year').val());
+    let dateInput = new GalacticDate(yearInput, monthInput, dayInput);
+
+
+    $("#solution").append("<li> The date " + (monthInput+1) + "/" + dayInput + "/" + yearInput + " is a " + dateInput.getWeekday() + "! </li>");
+
+
+
+    // output.forEach(function(element) {
+    //   $('#solution').append("<li>" + element + "</li>");
+    // });
   });
 });

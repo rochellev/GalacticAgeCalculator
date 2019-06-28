@@ -10,3 +10,6 @@
 
 
 * I will use life expectancy for men 77 , women is 79 Earth Years
+
+* used ping pong and weekday to help set up
+* for some reason npm run start not working  and i spend way too much time trying to fix that
